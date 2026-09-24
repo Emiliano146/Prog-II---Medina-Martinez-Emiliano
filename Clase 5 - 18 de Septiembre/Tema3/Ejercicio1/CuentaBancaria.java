@@ -1,16 +1,20 @@
-package Tema2.Ejercicio2;
+package Tema3.Ejercicio1;
 
 public class CuentaBancaria {
-    
     private String titular;
     private int numeroCuenta;
     private double saldo;
 
-    // Constructor
+    // Constructor n°1
     public CuentaBancaria(String titular, int numeroCuenta, double saldo) {
         this.titular = titular;
         this.numeroCuenta = numeroCuenta;
         this.saldo = saldo;
+    }
+
+    // Constructor n°2
+    public CuentaBancaria(String titular, int numeroCuenta) {
+        this(titular, numeroCuenta, 0);
     }
 
     public String getTitular() {
