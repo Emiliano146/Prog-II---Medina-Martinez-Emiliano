@@ -5,14 +5,14 @@ public class Figura {
 
     // Constructor
     public Figura(String nombre) {
-        if (!nombre.equals("Círculo") && !nombre.equals("Rectángulo")) {
-            throw new IllegalArgumentException("La figura solo puede ser \"Círculo\" o \"Rectángulo\"");
-        }
-
         this.nombre = nombre;
     }
 
     public String getNombre() {
         return nombre;
+    }
+
+    public double calcularArea() {
+        return 0;
     }
 }

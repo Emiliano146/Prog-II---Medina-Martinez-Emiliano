@@ -5,10 +5,15 @@ public class Rectangulo extends Figura {
     private double altura;
 
     //Constructor
-    public Rectangulo (String nombre, double base, double altura) {
-        super(nombre);
+    public Rectangulo (double base, double altura) {
+        super("Rectángulo");
         this.base = base;
         this.altura = altura;
+    }
+
+    @Override
+    public double calcularArea() {
+        return base * altura;
     }
     
 }

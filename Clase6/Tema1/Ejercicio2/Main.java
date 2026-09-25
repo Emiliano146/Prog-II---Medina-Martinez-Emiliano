@@ -2,62 +2,18 @@ package Clase6.Tema1.Ejercicio2;
 
 public class Main {
     public static void main(String[] args) {
-        Circulo redondo = new Circulo("Círculo", 50);
-        Rectangulo cuadrado = new Rectangulo("Rectángulo", 20, 20);
+        Circulo redondo = new Circulo(50);
+        Rectangulo cuadrado = new Rectangulo(20, 20);
 
-        try {
-            Circulo errorRedondo = new Circulo("a", 56);
-            System.out.println("Nombre de errorRedondo: " + errorRedondo.getNombre());
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+        System.out.println("Area del círculo: " + redondo.calcularArea());
+        System.out.println("Area del rectángulo: " + cuadrado.calcularArea());
+
+
+        // Yo puedo hacer esto:
+        Figura figura = new Figura("Figura");
+        System.out.println(figura.getNombre());
+        // Pero no tiene sentido, figura no debería poder instanciarse
+        // Pero nada previene que pueda hacerlo y no de ningún error
+        // para prevenir eso, hay que usar abstract
     }
 }
-
-
-// AGREGAR LA FUNCION calcularArea() A FIGURA, LUEGO HACERLO EN CIRCULO Y RECTANGULO CON @override
-// Se supone que va en Ejercicio_de_la_clase
-
-
-
-/*
-
-package Clase6.Ejercicio_de_la_clase;
-
-public class Figura {
-
-}
-
-// Subclase concreta
-class Circulo extends Figura {
-    private final double radio;
-
-    public Circulo(double radio) {
-        super("Círculo");
-        this.radio = radio;
-    }
-
-    @Override
-    public double calcularArea() {
-        return Math.PI * radio * radio;
-    }
-}
-
-// Subclase concreta
-class Rectangulo extends Figura {
-    private final double base;
-    private final double altura;
-
-    public Rectangulo(double base, double altura) {
-        super("Rectángulo");
-        this.base = base;
-        this.altura = altura;
-    }
-
-    @Override
-    public double calcularArea() {
-        return base * altura;
-    }
-}
-
-*/

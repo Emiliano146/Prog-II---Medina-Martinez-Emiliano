@@ -4,9 +4,14 @@ public class Circulo extends Figura {
     private double radio;
 
     //Constructor
-    public Circulo(String nombre, double radio) {
-        super(nombre);
+    public Circulo(double radio) {
+        super("Círculo");
         this.radio = radio;
+    }
+
+    @Override
+    public double calcularArea() {
+        return Math.PI * radio * radio;
     }
     
 }
