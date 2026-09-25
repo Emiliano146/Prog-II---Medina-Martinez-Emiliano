@@ -1,0 +1,1 @@
+Ejercicio 1 (intermedio). Cargar un Empleado[] mezclando instancias de EmpleadoPorHoras y EmpleadoAsalariado, recorrerlo con un for-each usando exclusivamente la referencia de tipo Empleado, e invocar calcularSueldo() sobre cada elemento. Explicar en un comentario por qué, aunque la referencia declarada es Empleado, se ejecuta la fórmula correcta de cada subclase.
