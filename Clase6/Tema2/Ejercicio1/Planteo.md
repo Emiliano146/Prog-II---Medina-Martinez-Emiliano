@@ -1,0 +1,1 @@
+Ejercicio 1 (básico-intermedio). Sobreescribir calcularSueldo() en EmpleadoPorHoras (horas × valor hora) y en EmpleadoAsalariado (sueldo básico + bono), cada una con @Override. Instanciar un objeto de cada subclase y mostrar, para cada uno, el sueldo calculado.
