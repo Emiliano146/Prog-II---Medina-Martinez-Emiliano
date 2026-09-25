@@ -1,0 +1,1 @@
+Ejercicio 1 (básico). Convertir Empleado (Clase 5) en superclase de dos subclases: EmpleadoPorHoras (horas trabajadas, valor hora) y EmpleadoAsalariado (sueldo básico, bono), cada una con su propio constructor que invoque super(nombre, legajo) para inicializar los atributos heredados sin duplicarlos.
