@@ -1,4 +1,4 @@
-package tema2_ejercicio1;
+package Clase4.tema2_ejercicio1;
 
 public class CuentaBancaria {
 

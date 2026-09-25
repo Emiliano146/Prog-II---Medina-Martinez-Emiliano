@@ -1,4 +1,4 @@
-package Ejercicio_de_la_clase;
+package Clase5.Ejercicio_de_la_clase;
 
 public class EmpleadoPorHoras extends Empleado {
     private double horasTrabajadas;

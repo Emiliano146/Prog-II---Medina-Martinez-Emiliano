@@ -1,4 +1,4 @@
-package tema1_ejercicio1;
+package Clase4.tema1_ejercicio1;
 
 // uso package para organizar los archivos
 

@@ -1,4 +1,4 @@
-package tema1_ejercicio2;
+package Clase4.tema1_ejercicio2;
 
 public class Empleado {
     
