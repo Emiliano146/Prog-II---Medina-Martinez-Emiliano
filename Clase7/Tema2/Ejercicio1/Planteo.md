@@ -1,3 +1,1 @@
 Ejercicio 1 (básico-intermedio). Convertir Figura (Clase 6) en abstract class con un método abstracto calcularArea(), eliminando cualquier implementación por defecto que retornara 0. Verificar que el compilador rechaza instanciar Figura directamente, y que cada subclase concreta (Circulo, Rectangulo, Triangulo) está obligada a implementar calcularArea().
-
-Ejercicio 2 (intermedio-avanzado). Hacer que Figura implemente además Comparable<Figura>, comparando por área, y usar Arrays.sort (o Collections.sort si se guardan en un ArrayList<Figura>) sobre un conjunto heterogéneo de al menos cuatro figuras de tipos distintos. Mostrar la colección antes y después de ordenar.

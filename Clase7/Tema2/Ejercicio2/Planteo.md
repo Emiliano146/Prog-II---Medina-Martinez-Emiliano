@@ -1,0 +1,1 @@
+Ejercicio 2 (intermedio-avanzado). Hacer que Figura implemente además Comparable<Figura>, comparando por área, y usar Arrays.sort (o Collections.sort si se guardan en un ArrayList<Figura>) sobre un conjunto heterogéneo de al menos cuatro figuras de tipos distintos. Mostrar la colección antes y después de ordenar.
