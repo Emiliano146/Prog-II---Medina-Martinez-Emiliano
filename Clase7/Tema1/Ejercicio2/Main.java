@@ -8,6 +8,8 @@ public class Main {
         // El empleado tendrá un sueldo de 0 y un bono de 0
 
         Empleado empleado2 = new EmpleadoAsalariado("Mario", 11188, 99999, 777);
+        // Acá se usa el constructor EmpleadoAsalariado(String nombre, int legajo, int sueldoBasico, int bono);
+        // El empleado tendrá un sueldo de 99999 y un bono de 7
 
         // Acá usamos sobrecarga de constructores.
         // Los dos constructores tienen el mismo nombre, pero reciben distintos parámetros.
