@@ -1,8 +1,8 @@
-package Clase8.app;
+package Clase8.Ejercicio1.app;
 
 import java.util.ArrayList;
 
-import Clase8.modelo.Enviable;
+import Clase8.Ejercicio1.modelo.Enviable;
 
 public class CentroLogistico {
 

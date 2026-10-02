@@ -1,4 +1,4 @@
-package Clase8.modelo;
+package Clase8.Ejercicio1.modelo;
 
 public class PaqueteFragil extends Paquete implements Enviable {
     private String nivelProteccion;

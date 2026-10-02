@@ -1,4 +1,4 @@
-package Clase8.modelo;
+package Clase8.Ejercicio1.modelo;
 
 abstract class Paquete {
     private String codigoTrack;

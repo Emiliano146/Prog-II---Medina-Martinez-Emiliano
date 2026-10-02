@@ -1,7 +1,7 @@
-package Clase8.app;
+package Clase8.Ejercicio1.app;
 
-import Clase8.modelo.PaqueteEstandar;
-import Clase8.modelo.PaqueteFragil;
+import Clase8.Ejercicio1.modelo.PaqueteEstandar;
+import Clase8.Ejercicio1.modelo.PaqueteFragil;
 
 public class Main {
     
