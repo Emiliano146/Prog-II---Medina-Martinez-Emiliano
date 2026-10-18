@@ -1,24 +1,26 @@
+
 package Clase8.Ejercicio2.modelo;
 
-public abstract class Espacio {
-    // identificador y código único
+public abstract class Espacio implements Reservable {
 
     private String identificador;
     private int capacidadMaximaPersonas;
     private double precioXhora;
 
-    // Constructor
-    public Espacio(String identificador, int capacidadMaximaPersonas, double precioXhora) {
-        if (identificador == null || identificador.isEmpty()) {
-            throw new IllegalArgumentException("El identificador no puede estar vacío.");
+    public Espacio(String identificador,
+            int capacidadMaximaPersonas,
+            double precioXhora) {
+
+        if (identificador == null || identificador.trim().isEmpty()) {
+            throw new IllegalArgumentException("El identificador no puede ser nulo ni estar vacío.");
         }
 
         if (capacidadMaximaPersonas <= 0) {
-            throw new IllegalArgumentException("La capacidad máxima de personas debe ser mayor a 0.");
+            throw new IllegalArgumentException("La capacidad debe ser mayor a cero.");
         }
 
         if (precioXhora <= 0) {
-            throw new IllegalArgumentException("El precio por hora debe ser mayor a 0.");
+            throw new IllegalArgumentException("El precio por hora debe ser mayor a cero.");
         }
 
         this.identificador = identificador;
@@ -27,21 +29,54 @@ public abstract class Espacio {
     }
 
     public String nuevaCapacidad(int nuevaCapacidad) {
+        validarCapacidad(nuevaCapacidad);
         capacidadMaximaPersonas = nuevaCapacidad;
 
-        return "Nueva capacidad: " + capacidadMaximaPersonas;
+        return "Nueva capacidad de " + identificador + ": " + capacidadMaximaPersonas;
     }
 
-    public String nuevaCapacidad(int nuevaCapacidad, boolean mobiliarioEspecialNecesario) {
+    public String nuevaCapacidad(int nuevaCapacidad,
+            boolean mobiliarioEspecialNecesario) {
+
+        validarCapacidad(nuevaCapacidad);
         capacidadMaximaPersonas = nuevaCapacidad;
 
-        if (mobiliarioEspecialNecesario) {
-            return "Nueva capacidad: " + capacidadMaximaPersonas + " [Mobiliario Especial]";
+        if (mobiliarioEspecialNecesario
+                && !identificador.endsWith(" [Mobiliario Especial]")) {
+            identificador += " [Mobiliario Especial]";
         }
 
-        return "Nueva capacidad: " + capacidadMaximaPersonas;
+        return "Nueva capacidad de " + identificador + ": " + capacidadMaximaPersonas;
     }
 
-    
-    
+    private void validarCapacidad(int capacidad) {
+        if (capacidad <= 0) {
+            throw new IllegalArgumentException("La capacidad debe ser mayor a cero.");
+        }
+    }
+
+    public String getIdentificador() {
+        return identificador;
+    }
+
+    public int getCapacidadMaximaPersonas() {
+        return capacidadMaximaPersonas;
+    }
+
+    public double getPrecioXhora() {
+        return precioXhora;
+    }
+
+    @Override
+    public abstract double calcularCosto(double horas);
+
+    @Override
+    public abstract boolean estaDisponible();
+
+    @Override
+    public String toString() {
+        return "Identificador: " + identificador
+                + " | Capacidad: " + capacidadMaximaPersonas
+                + " | Precio por hora: $" + precioXhora;
+    }
 }

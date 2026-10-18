@@ -1,20 +1,46 @@
+
 package Clase8.Ejercicio2.modelo;
 
 public class EscritorioIndividual extends Espacio {
 
-    // Constructor
-    public EscritorioIndividual(String identificador, int capacidadMaximaPersonas, double precioXhora, boolean monitorExtra) {
+    private boolean monitorExtra;
 
-        super(identificador, capacidadMaximaPersonas, calcularPrecio(precioXhora, monitorExtra));
+    public EscritorioIndividual(String identificador,
+            int capacidadMaximaPersonas,
+            double precioXhora,
+            boolean monitorExtra) {
 
+        super(identificador, capacidadMaximaPersonas, precioXhora);
+        this.monitorExtra = monitorExtra;
     }
 
-    // Método para agregar 15% al precio por hora, en caso de que haya un monitor extra
-    private static double calcularPrecio(double precio, boolean monitorExtra) {
-        if (monitorExtra) {
-            precio *= 1.15;
+    @Override
+    public double calcularCosto(double horas) {
+        if (horas <= 0) {
+            throw new IllegalArgumentException("Las horas deben ser mayores a cero.");
         }
 
-        return precio;
+        double costo = getPrecioXhora() * horas;
+
+        if (monitorExtra) {
+            costo *= 1.15;
+        }
+
+        return costo;
+    }
+
+    @Override
+    public boolean estaDisponible() {
+        return true;
+    }
+
+    public boolean tieneMonitorExtra() {
+        return monitorExtra;
+    }
+
+    @Override
+    public String toString() {
+        return "Escritorio Individual | " + super.toString()
+                + " | Monitor extra: " + (monitorExtra ? "Sí" : "No");
     }
 }
