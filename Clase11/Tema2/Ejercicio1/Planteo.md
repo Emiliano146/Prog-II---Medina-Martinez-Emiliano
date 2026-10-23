@@ -1,0 +1,1 @@
+Ejercicio 1 (básico). Implementar ListaEnlazada (clase interna Nodo con dato y siguiente), con insertarInicio(int), insertarFinal(int), buscar(int valor) (retorna boolean), tamanio() y mostrar(). No usar arreglos ni java.util. Probar en main combinando inserciones al inicio y al final.

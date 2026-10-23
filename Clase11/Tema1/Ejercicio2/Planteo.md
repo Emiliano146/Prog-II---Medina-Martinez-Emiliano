@@ -1,0 +1,1 @@
+Ejercicio 2 (intermedio). Extender ListaEstatica con insertarEnPosicion(int indice, int valor), que inserta desplazando los elementos existentes desde indice hacia la derecha, y eliminarEnPosicion(int indice), que elimina desplazando hacia la izquierda. Ambos métodos deben validar que el índice esté dentro del rango válido y lanzar excepción en caso contrario.

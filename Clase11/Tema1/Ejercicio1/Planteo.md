@@ -1,0 +1,1 @@
+Ejercicio 1 (básico). Implementar ListaEstatica, con capacidad fija recibida en el constructor, atributo cantidad y arreglo int[] datos. Debe ofrecer insertar(int valor) (al final, lanzando excepción si está llena), buscar(int valor) (retorna el índice o −1) y mostrar(). Probar en main insertando al menos cuatro valores y buscando uno existente y uno inexistente.
