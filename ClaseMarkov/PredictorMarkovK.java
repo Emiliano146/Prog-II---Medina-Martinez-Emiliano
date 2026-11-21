@@ -14,7 +14,7 @@ public class PredictorMarkovK {
         }
         lector.close();
         String texto = sb.toString().replaceAll("[.,;:!?\"()]", "");
-        int k = 4;
+        int k = 8;
 
         // Estado inicial: un fragmento de k caracteres tomado del texto
         int inicio = (int) (Math.random() * (texto.length() - k));
